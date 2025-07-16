@@ -46,7 +46,7 @@ public class Product {
     // stampo informazioni prodotto
     @Override
     public String toString() {
-        return "il codice prodotto è: " + code + " del prodotto: " + name + " " + brand + " che costa: " + getFinalPriceFormatted();
+        return "il codice è: " + code + "\ndel prodotto: " + name + " " + brand + "\nche costa: " + getFinalPriceFormatted();
     }
 
 

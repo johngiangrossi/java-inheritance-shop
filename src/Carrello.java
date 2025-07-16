@@ -54,7 +54,7 @@ public class Carrello {
         */
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("inserisci se vuoi uno smartphone o un televisore o delle cuffie");
+        System.out.println("inserisci: \n 1 -> se vuoi uno smartphone \n 2 -> se vuoi un televisore \n 3 -> se vuoi delle cuffie");
         int userChoice = scanner.nextInt();
         scanner.nextLine();
 
@@ -89,7 +89,7 @@ public class Carrello {
             int dimension = scanner.nextInt();
             scanner.nextLine();
         
-            System.out.println("inserisci true se è smart o false se è non è smart");
+            System.out.println("inserisci: \n true -> se è smart \n false -> se non è smart");
             boolean smart = scanner.nextBoolean();
             scanner.nextLine();
         
@@ -99,7 +99,7 @@ public class Carrello {
             System.out.println("inserisci il colore delle cuffie");
             String color = scanner.nextLine();
         
-            System.out.println("inserisci true se è wireless o false se è non è wireless");
+            System.out.println("inserisci: \n true -> se è wireless \n false -> se non è wireless");
             boolean wireless = scanner.nextBoolean();
             scanner.nextLine();
         
@@ -127,7 +127,7 @@ public class Carrello {
                 int dimension = scanner.nextInt();
                 scanner.nextLine();
 
-                System.out.println("inserisci true se è smart o false se è non è smart");
+                System.out.println("inserisci: \n true -> se è smart \n false -> se non è smart");
                 boolean smart = scanner.nextBoolean();
                 scanner.nextLine();
 
@@ -138,7 +138,7 @@ public class Carrello {
                 System.out.println("inserisci il colore delle cuffie");
                 String color = scanner.nextLine();
 
-                System.out.println("inserisci true se è wireless o false se è non è wireless");
+                System.out.println("inserisci: \n true -> se è wireless \n false -> se non è wireless");
                 boolean wireless = scanner.nextBoolean();
                 scanner.nextLine();
 

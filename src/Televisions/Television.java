@@ -34,7 +34,7 @@ public class Television extends Product {
     // aggrego le info del prodotto con quelle del televisore
     @Override
     public String toString() {
-        return super.toString() + " le dimensioni sono: " + dimension + " pixel ed: " + getStringSmart();
+        return super.toString() + "\nle dimensioni sono: " + dimension + "\npixel ed: " + getStringSmart();
     }
 
 

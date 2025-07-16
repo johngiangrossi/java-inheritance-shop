@@ -33,7 +33,7 @@ public class Headphone extends Product{
     // aggrego le info del prodotto con quelle dello smartphone
     @Override
     public String toString() {
-        return super.toString() + " il colore è: " + color + " e sono cuffie: " + getStringWireless();
+        return super.toString() + "\nil colore è: " + color + "\ne sono cuffie: " + getStringWireless();
     }
 
 

@@ -26,7 +26,7 @@ public class Smartphone extends Product {
     // aggrego le info del prodotto con quelle dello smartphone
     @Override
     public String toString() {
-        return super.toString() + " il codice IMEI è: " + this.codeIMEI + " che ha una memoria RAM di: " + this.memoryRAM;
+        return super.toString() + "\nil codice IMEI è: " + this.codeIMEI + "\nche ha una memoria RAM di: " + this.memoryRAM;
     }
     
 
