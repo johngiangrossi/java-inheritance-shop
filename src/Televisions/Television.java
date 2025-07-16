@@ -9,8 +9,8 @@ public class Television extends Product {
     private boolean smart;
     
     // costruttore
-    public Television(String code, String name, String brand, double price, int dimension, boolean smart) {
-        super(code, name, brand, price);
+    public Television(String name, String brand, double price, int dimension, boolean smart) {
+        super(name, brand, price);
         if (dimension <= 0) {
             System.out.println("hai inserito valori errati, uso quelli di default");
         } else {
@@ -30,15 +30,11 @@ public class Television extends Product {
         }
     }
 
-    // stampo le informazioni smartphone
-    public void stampTelevisionInfo() {
-        System.out.println("le dimensioni sono: " + dimension + " pixel ed: " + getStringSmart());
-    }
-
+    // stampo le informazioni smartphone usando override
     // aggrego le info del prodotto con quelle del televisore
-    public void stampTelevisionAllInfo() {
-        stampProductInfo();
-        stampTelevisionInfo();
+    @Override
+    public String toString() {
+        return super.toString() + " le dimensioni sono: " + dimension + " pixel ed: " + getStringSmart();
     }
 
 

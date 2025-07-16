@@ -9,8 +9,8 @@ public class Smartphone extends Product {
     private int memoryRAM;
     
     // costruttore
-    public Smartphone(String code, String name, String brand, double price, String codeIMEI, int memoryRAM) {
-        super(code, name, brand, price);
+    public Smartphone(String name, String brand, double price, String codeIMEI, int memoryRAM) {
+        super(name, brand, price);
         if (codeIMEI == null || codeIMEI.equals("") || memoryRAM <= 0) {
             System.out.println("hai inserito valori errati, uso quelli di defautl");
         } else {
@@ -22,15 +22,11 @@ public class Smartphone extends Product {
 
 
     // metodi
-    // stampo le informazioni smartphone
-    public void stampSmartphoneInfo() {
-        System.out.println("il codice IMEI è: " + codeIMEI + " che ha una memoria RAM di: " + memoryRAM);
-    }
-
+    // stampo le informazioni smartphone usando override
     // aggrego le info del prodotto con quelle dello smartphone
-    public void stampSmartphoneAllInfo() {
-        stampProductInfo();
-        stampSmartphoneInfo();
+    @Override
+    public String toString() {
+        return super.toString() + " il codice IMEI è: " + this.codeIMEI + " che ha una memoria RAM di: " + this.memoryRAM;
     }
     
 

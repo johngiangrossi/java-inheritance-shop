@@ -1,20 +1,22 @@
 package Products;
 
+import java.util.Random;
+
 public class Product {
 
     // fields
-    private String code;
+    private int code;
     private String name;
     private String brand;
     private double price;
     private int iva = 22;
 
     // costruttore
-    public Product(String code, String name, String brand, double price) {
-        if (code == null || code.equals("") || name == null || name.equals("")|| brand == null || brand.equals("") || price <= 0) {
+    public Product(String name, String brand, double price) {
+        if (name == null || name.equals("")|| brand == null || brand.equals("") || price <= 0) {
             System.out.println("inserito valori errati, uso quelli di default");
         } else {
-            this.code = code;
+            this.code = getNewCode();
             this.name = name;
             this.brand = brand;
             this.price = price;
@@ -22,6 +24,13 @@ public class Product {
     }
 
     // metodi
+    // genero codice prodotto generico
+    private int getNewCode() {
+        Random random = new Random();
+        int codeNumber = random.nextInt(1000);
+        return codeNumber;
+    }
+
     // calcolo prezzo finale
     public Double getFinalPrice() {
         Double priceIva = (price * iva) / 100;
@@ -35,14 +44,15 @@ public class Product {
     }
     
     // stampo informazioni prodotto
-    public void stampProductInfo() {
-        System.out.println("il codice prodotto è: " + code + " del prodotto: " + name + " " + brand + " che costa: " + getFinalPriceFormatted());
+    @Override
+    public String toString() {
+        return "il codice prodotto è: " + code + " del prodotto: " + name + " " + brand + " che costa: " + getFinalPriceFormatted();
     }
 
 
     // getters
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 

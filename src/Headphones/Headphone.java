@@ -9,8 +9,8 @@ public class Headphone extends Product{
     private boolean wireless;
     
     // costruttore
-    public Headphone(String code, String name, String brand, double price, String color, boolean wireless) {
-        super(code, name, brand, price);
+    public Headphone(String name, String brand, double price, String color, boolean wireless) {
+        super(name, brand, price);
         if (color == null || color.equals("")) {
             System.out.println("hai inserito valori errati, uso quelli di default");
         } else {
@@ -29,15 +29,11 @@ public class Headphone extends Product{
         }
     }
 
-    // stampo le informazioni smartphone
-    public void stampHeadphoneInfo() {
-        System.out.println("il colore è: " + color + " e sono cuffie: " + getStringWireless());
-    }
-
+    // stampo le informazioni smartphone usando override
     // aggrego le info del prodotto con quelle dello smartphone
-    public void stampHeadphoneAllInfo() {
-        stampProductInfo();
-        stampHeadphoneInfo();
+    @Override
+    public String toString() {
+        return super.toString() + " il colore è: " + color + " e sono cuffie: " + getStringWireless();
     }
 
 
